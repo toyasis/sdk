@@ -4176,6 +4176,11 @@ int MegaClient::dumpsession(byte* session, int size)
 
 string *MegaClient::sessiontransferdata(const char *url)
 {
+    if (loggedin() != FULLACCOUNT)
+    {
+        return NULL;
+    }
+
     std::stringstream ss;
 
     // open array
@@ -4193,7 +4198,11 @@ string *MegaClient::sessiontransferdata(const char *url)
     ss << sids << "\",\"";
 
     // add URL
-    ss << url << "\",";
+    if (url)
+    {
+        ss << url;
+    }
+    ss << "\",";
 
     // add RSA privk
     string privk;
