@@ -1163,6 +1163,7 @@ protected:
         virtual void enumeratequotaitems_result(error e);
         virtual void additem_result(error);
         virtual void submitpurchasereceipt_result(error);
+        virtual void copysession_result(string*, error);
 
         virtual void checkfile_result(handle h, error e);
         virtual void checkfile_result(handle h, error e, byte* filekey, m_off_t size, m_time_t ts, m_time_t tm, string* filename, string* fingerprint, string* fileattrstring);

@@ -4811,6 +4811,11 @@ void MegaApiImpl::submitpurchasereceipt_result(error e)
     fireOnRequestFinish(request, MegaError(e));
 }
 
+void MegaApiImpl::copysession_result(string *session, error e)
+{
+
+}
+
 void MegaApiImpl::clearing()
 {
 

@@ -503,6 +503,14 @@ public:
     CommandSubmitPurchaseReceipt(MegaClient*, int, const char*);
 };
 
+class MEGA_API CommandCopySession : public Command
+{
+public:
+    void procresult();
+
+    CommandCopySession(MegaClient*);
+};
+
 } // namespace
 
 #endif
